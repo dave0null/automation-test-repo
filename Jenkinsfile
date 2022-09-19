@@ -1,14 +1,10 @@
-    agent {
-	docker {
-	    label 'my-defined-label'
-	    image 'php:8.1.0-alpine'
-	}
-    }
+pipeline {
+    agent any 
     stages {
-        stage('build') {
+        stage('Stage 1') {
             steps {
-                sh 'php --version'
+                echo 'Hello world!' 
             }
         }
     }
-
+}
