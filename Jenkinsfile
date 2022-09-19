@@ -1,4 +1,3 @@
-pipeline {
     agent {
 	docker {
 	    label 'my-defined-label'
@@ -12,4 +11,4 @@ pipeline {
             }
         }
     }
-}
+
