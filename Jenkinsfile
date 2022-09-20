@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-		sh('curl https://www.ipecho.io/plain >> log.txt')
+		sh('curl https://www.ipecho.io/plain')
             }
         }
     }
