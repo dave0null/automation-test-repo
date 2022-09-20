@@ -1,10 +1,13 @@
 pipeline {
     agent any 
+    parameters {
+	string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
+    }
     stages {
-        stage('Stage 1') {
-            steps {
-		sh('curl https://www.ipecho.io/plain')
-            }
-        }
+        stage('Example') {
+	    steps {
+		sh("echo ${STATEMENT}")
+	    }
+	}
     }
 }
